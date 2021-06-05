@@ -1,0 +1,136 @@
+[DEV_POSTGRES]
+USER=pps
+PASSWORD=pps
+HOST=server.name.com
+PORT=5432
+DATABASE=coldconsole2
+SCHEMA=public
+RESULT_TABLE_NAME=furnace_ppt_result
+ERROR_DETAILS_TABLE = error_details
+OVERALL_REPORT_TABLE = furnace_ppt_overall_result
+
+[PROD_POSTGRES]
+USER=pps
+PASSWORD=pps
+HOST=server.name.com
+PORT=5432
+DATABASE=coldconsole2
+SCHEMA=public
+RESULT_TABLE_NAME=furnace_ppt_result
+ERROR_DETAILS_TABLE = error_details
+OVERALL_REPORT_TABLE = furnace_ppt_overall_result
+
+[DEV_LOGGING]
+LOG_FOLDER_NAME=logs
+LOG_FILE_NAME=FurnacePTLog.log
+LOG_WHEN=midnight
+LOG_INTERNAL=1
+LOG_BACKUPCOUNT=30
+LOG_MAXBYTES=10 * 1024 * 1024
+LEVEL=logging.INFO
+
+
+[PROD_LOGGING]
+LOG_FOLDER_NAME=/app/prg/prod/furnace_ppt/logs
+LOG_FILE_NAME=FurnacePTLog.log
+LOG_WHEN=midnight
+LOG_INTERNAL=1
+LOG_BACKUPCOUNT=30
+LOG_MAXBYTES=10 * 1024 * 1024
+LEVEL=logging.INFO
+
+[DEV_CASSANDRA]
+DATABASEIP=['192.168.1.102','192.168.1.102','192.168.1.102']
+KEYSPACE=cas_pps
+TABLE_NAME=tagpool_with_tag
+CONFIG_TABLE_NAME=configuration_details
+SOFT_STD_DETAILS_TABLE_NAME = furnace_ppt_soft_std_details
+SOFT_TAGS_DETAILS_TABLE_NAME = soft_tag_details_fpt
+STD_DATA_TABLE_NAME = std_data_details_fpt
+
+[PROD_CASSANDRA]
+DATABASEIP=['cassandra-cas1','cassandra-cas2','cassandra-cas3']
+KEYSPACE=cas_pps
+TABLE_NAME=tagpool_with_tag
+CONFIG_TABLE_NAME=configuration_details
+SOFT_STD_DETAILS_TABLE_NAME = furnace_ppt_soft_std_details
+SOFT_TAGS_DETAILS_TABLE_NAME = soft_tag_details_fpt
+STD_DATA_TABLE_NAME = std_data_details_fpt
+
+[ALGO]
+ALGO_TAG = FPT
+ALGORITHM_NAME =Furnace Performance Tracker
+CONSOLE_NAME = Hot Console 1
+ONE_DAY_EPOCH = 86400000
+
+DATA_AVG_5MIN_COL = last_5_avg
+DATA_AVG_30MIN_COL = last_30_avg
+DATA_AVG_60MIN_COL = last_60_avg
+MIN_5_INTERVAL = 5
+MIN_30_INTERVAL = 30
+MIN_60_INTERVAL = 60
+
+
+
+CONFIG_FOLDER_NAME = config
+CERTIFICATE_FOLDER_NAME = certs
+
+PERMISSION_FILE_CER = pps_CLIENT.cer.pem
+PERMISSION_FILE_KEY = pps_CLIENT.key.pem
+
+
+BASIC_CONFIG_FILE_NAME = basic_conf.csv
+DYNAMIC_TAG_FILE_NAME = dynamic_tag.csv
+ERROR_CODE_FILE_NAME = error_code.csv
+FEED_TYPE_FILE_NAME = feed_type.csv
+MV_TAG_FREQUENCY_FILE_NAME = mv_tag_frequency.csv
+TAGS_LIST_FILE_NAME = TagsList.csv
+CONFIG_PARAM_FILE_NAME = config_parameters.csv
+FLAG_CONFIG_FILE_NAME = flag_config.csv
+
+
+
+BA101_CV_STD_MIN_VALUE_FILE_NAME    = ba101_cv_std_min_value.csv
+BA101_MIN_MAX_TAG_MAPPING_FILE_NAME = ba101_min_max_tag_mapping.csv
+BA102_CV_STD_MIN_VALUE_FILE_NAME    = ba102_cv_std_min_value.csv
+BA102_MIN_MAX_TAG_MAPPING_FILE_NAME = ba102_min_max_tag_mapping.csv
+BA103_CV_STD_MIN_VALUE_FILE_NAME    = ba103_cv_std_min_value.csv
+BA103_MIN_MAX_TAG_MAPPING_FILE_NAME = ba103_min_max_tag_mapping.csv
+BA104_CV_STD_MIN_VALUE_FILE_NAME    = ba104_cv_std_min_value.csv
+BA104_MIN_MAX_TAG_MAPPING_FILE_NAME = ba104_min_max_tag_mapping.csv
+BA105_CV_STD_MIN_VALUE_FILE_NAME    = ba105_cv_std_min_value.csv
+BA105_MIN_MAX_TAG_MAPPING_FILE_NAME = ba105_min_max_tag_mapping.csv
+BA106_CV_STD_MIN_VALUE_FILE_NAME    = ba106_cv_std_min_value.csv
+BA106_MIN_MAX_TAG_MAPPING_FILE_NAME = ba106_min_max_tag_mapping.csv
+BA107_CV_STD_MIN_VALUE_FILE_NAME    = ba107_cv_std_min_value.csv
+BA107_MIN_MAX_TAG_MAPPING_FILE_NAME = ba107_min_max_tag_mapping.csv
+BA108_CV_STD_MIN_VALUE_FILE_NAME    = ba108_cv_std_min_value.csv
+BA108_MIN_MAX_TAG_MAPPING_FILE_NAME = ba108_min_max_tag_mapping.csv
+BA109_CV_STD_MIN_VALUE_FILE_NAME    = ba109_cv_std_min_value.csv
+BA109_MIN_MAX_TAG_MAPPING_FILE_NAME = ba109_min_max_tag_mapping.csv
+BA110_CV_STD_MIN_VALUE_FILE_NAME    = ba110_cv_std_min_value.csv
+BA110_MIN_MAX_TAG_MAPPING_FILE_NAME = ba110_min_max_tag_mapping.csv
+BA111_CV_STD_MIN_VALUE_FILE_NAME    = ba111_cv_std_min_value.csv
+BA111_MIN_MAX_TAG_MAPPING_FILE_NAME = ba111_min_max_tag_mapping.csv
+BA112_CV_STD_MIN_VALUE_FILE_NAME    = ba112_cv_std_min_value.csv
+BA112_MIN_MAX_TAG_MAPPING_FILE_NAME = ba112_min_max_tag_mapping.csv
+BA113_CV_STD_MIN_VALUE_FILE_NAME    = ba113_cv_std_min_value.csv
+BA113_MIN_MAX_TAG_MAPPING_FILE_NAME = ba113_min_max_tag_mapping.csv
+BA117_CV_STD_MIN_VALUE_FILE_NAME    = ba117_cv_std_min_value.csv
+BA117_MIN_MAX_TAG_MAPPING_FILE_NAME = ba117_min_max_tag_mapping.csv
+
+
+OFFLINE_FLAG=0
+GREEN_FLAG=1
+BLUE_FLAG=2
+YELLOW_FLAG=3
+RED_FLAG=4
+
+OUTPUT_GREEN = GREEN_FLAG
+OUTPUT_RED = RED
+OUTPUT_INPUT_ERROR = INPUT_ERROR
+
+STD_AVG_DATA_DETAILS = std_avg_data_details
+RUN_TIME_TAGS_DETAILS = run_time_tags_details
+
+#SCHEDULING_INTERVAL=300
